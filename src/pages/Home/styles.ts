@@ -81,7 +81,7 @@ export const MinuteAmountInput = styled(BaseInput)`
   width: 4rem;
 `
 
-export const StartCountButton = styled.button`
+export const ButtonBase = styled.button`
   width: 100%;
   border: unset;
   padding: 1rem;
@@ -104,5 +104,14 @@ export const StartCountButton = styled.button`
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+  }
+`
+
+export const StartCountButton = styled(ButtonBase)``
+
+export const StopCountButton = styled(ButtonBase)`
+  background-color: ${(props) => props.theme['red-500']};
+  &:not(:disabled):hover {
+    background-color: ${(props) => props.theme['red-700']};
   }
 `
