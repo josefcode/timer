@@ -129,7 +129,7 @@ export const Home = () => {
     <HomeContainer>
       <section>
         <FormContainer onSubmit={handleSubmit(handleFormSubmit)} action="">
-          <nav>
+          <div>
             <label htmlFor="task">I will work in</label>
             <TaskInput
               id="task"
@@ -157,7 +157,7 @@ export const Home = () => {
               {...register('minutesAmount', { valueAsNumber: true })}
             />
             <span>minutes.</span>
-          </nav>
+          </div>
           <ul>
             <ListItem>{minutes[0]}</ListItem>
             <ListItem>{minutes[1]}</ListItem>
