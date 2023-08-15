@@ -7,7 +7,7 @@ const STATUS_COLORS = {
 } as const
 
 interface StatusProps {
-  statusColor: keyof typeof STATUS_COLORS
+  statuscolor: keyof typeof STATUS_COLORS
 }
 
 export const HistoryContainer = styled.main`
@@ -78,6 +78,6 @@ export const Status = styled.span<StatusProps>`
     height: 0.5rem;
     border-radius: 9999px;
     background-color: ${(props) =>
-      props.theme[STATUS_COLORS[props.statusColor]]};
+      props.theme[STATUS_COLORS[props.statuscolor]]};
   }
 `

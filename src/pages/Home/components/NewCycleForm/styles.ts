@@ -1,46 +1,11 @@
 import styled from 'styled-components'
 
-export const HomeContainer = styled.main`
-  flex: 1;
+export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  width: 100%;
   align-items: center;
-  justify-content: center;
 `
 
-export const FormContainer = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3.5rem;
-
-  nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: ${(props) => props.theme['gray-100']};
-    flex-wrap: wrap;
-    font-size: 1.125rem;
-    font-weight: bold;
-  }
-`
-export const ListItem = styled.li`
-  background-color: ${(props) => props.theme['gray-700']};
-  padding: 2rem 1rem;
-  border-radius: 8px;
-`
-
-export const Separator = styled.li`
-  background-color: transparent !important;
-  padding: 2rem 0;
-  color: ${(props) => props.theme['green-500']};
-  width: 4rem;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-`
 const BaseInput = styled.input`
   background-color: transparent;
   height: 2.5rem;
