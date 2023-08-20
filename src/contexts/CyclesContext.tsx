@@ -48,7 +48,6 @@ export const CyclesContextProvider = ({
     activeCycleId: null
   }, (initialState) => {
     const storedStateAsJSON = localStorage.getItem("@timer:cycle-state-1.0.0")
-    console.log(storedStateAsJSON)
     if(storedStateAsJSON){
       return JSON.parse(storedStateAsJSON)
     }
