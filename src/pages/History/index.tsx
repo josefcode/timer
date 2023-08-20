@@ -1,10 +1,20 @@
 import { useContext } from 'react'
-import { HistoryContainer, HistorySection, Status } from './styles'
+import { ButtonContainer, HistoryContainer, HistorySection, Status } from './styles'
 import { formatDistanceToNow } from 'date-fns'
 import { CyclesContext } from '../../contexts/CyclesContext'
+import { useNavigate } from "react-router-dom";
+
 
 export const History = () => {
   const { cycle } = useContext(CyclesContext)
+
+const navigate = useNavigate();
+
+  const clearHistory = () => {
+    localStorage.removeItem("@timer:cycle-state-1.0.0")
+    navigate('/')
+    window.location.reload()
+  }
 
   return (
     <HistoryContainer>
@@ -20,13 +30,13 @@ export const History = () => {
             </tr>
           </thead>
           <tbody>
-            {cycle.map((item) => {
+            {cycle?.map((item) => {
               return (
                 <tr key={item.id}>
                   <td>{item.task}</td>
                   <td>{item.minutesAmounts}</td>
                   <td>
-                    {formatDistanceToNow(item.startDate, {
+                    {formatDistanceToNow(new Date(item.startDate), {
                       addSuffix: true,
                     })}
                   </td>
@@ -46,6 +56,7 @@ export const History = () => {
             })}
           </tbody>
         </table>
+        <ButtonContainer onClick = {clearHistory}>Clear all history</ButtonContainer>
       </HistorySection>
     </HistoryContainer>
   )

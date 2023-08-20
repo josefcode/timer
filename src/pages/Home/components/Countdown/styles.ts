@@ -13,8 +13,10 @@ export const ListItem = styled.li`
   background-color: ${(props) => props.theme['gray-700']};
   padding: 2rem 1rem;
   border-radius: 8px;
+  @media (max-width: 480px) {
+    font-size: 3rem
+    }
 `
-
 export const Separator = styled.li`
   background-color: transparent !important;
   padding: 2rem 0;
@@ -23,4 +25,8 @@ export const Separator = styled.li`
   display: flex;
   overflow: hidden;
   justify-content: center;
+
+  @media (max-width: 480px) {
+    font-size: 3rem
+    }
 `

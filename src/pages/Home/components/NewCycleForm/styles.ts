@@ -4,8 +4,12 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-`
 
+  @media (max-width: 480px) {
+   flex-direction: column;
+  }
+
+`
 const BaseInput = styled.input`
   background-color: transparent;
   height: 2.5rem;

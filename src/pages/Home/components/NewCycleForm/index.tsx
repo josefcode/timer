@@ -9,7 +9,7 @@ export const NewCycleForm = () => {
 
   return (
     <Container>
-      <label htmlFor="task">I will work in</label>
+      <label htmlFor="task">Task:</label>
       <TaskInput
         id="task"
         placeholder="add a task"
@@ -25,7 +25,7 @@ export const NewCycleForm = () => {
         <option value="Project 4" />
         <option value="Project 5" />
       </datalist>
-      <label htmlFor="minutesAmount">durante</label>
+      <label htmlFor="minutesAmount">durante:</label>
       <MinuteAmountInput
         type="number"
         id="minutesAmount"

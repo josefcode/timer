@@ -16,6 +16,9 @@ export const HistoryContainer = styled.main`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 480px) {
+    padding-inline: 1rem
+   }
   h1 {
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
@@ -81,3 +84,31 @@ export const Status = styled.span<StatusProps>`
       props.theme[STATUS_COLORS[props.statuscolor]]};
   }
 `
+
+export const ButtonContainer = styled.button`
+  width: 150px;
+  border: unset;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: bold;
+
+  cursor: pointer;
+  color: ${(props) => props.theme['gray-100']};
+  background-color: ${(props) => props.theme['green-500']};
+
+  &:hover {
+    background-color: ${(props) => props.theme['green-700']};
+  }
+
+  &:focus {
+    box-shadow: none;
+    border-color: ${(props) => props.theme['green-500']};
+  }
+`
+
